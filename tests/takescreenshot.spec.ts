@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.only('should take a Full Page screenshot', async ({ page }) => {
+test('should take a Full Page screenshot', async ({ page }) => {
     await page.setViewportSize({ width: 1920, height: 1080 });
     await page.goto('https://mitesh411.github.io/MyResume/');
     await page.screenshot({ path: 'screenshot/fullpage.png', fullPage: true });

@@ -1,0 +1,1 @@
+{"bookings":[{"bookingDates":{"checkin":"2022-02-01","checkout":"2022-02-05"}}]}

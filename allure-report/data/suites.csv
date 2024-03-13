@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Mar 13 10:28:26 IST 2024","Wed Mar 13 10:28:26 IST 2024","471","chromium","get.spec.ts","","","","API Delete Request",""
+"passed","Wed Mar 13 10:28:24 IST 2024","Wed Mar 13 10:28:25 IST 2024","989","chromium","get.spec.ts","","","","GET booking summary",""
+"passed","Wed Mar 13 10:28:25 IST 2024","Wed Mar 13 10:28:26 IST 2024","461","chromium","get.spec.ts","","","","API Put Request",""
+"passed","Wed Mar 13 10:28:25 IST 2024","Wed Mar 13 10:28:25 IST 2024","671","chromium","get.spec.ts","","","","API Post  Reponse",""
+"passed","Wed Mar 13 10:28:25 IST 2024","Wed Mar 13 10:28:26 IST 2024","436","chromium","get.spec.ts","","","","API Patch Request",""

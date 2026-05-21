@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:security": "playwright test tests/security",
+    "test:security:chromium": "playwright test tests/security --project=chromium",
+    "test:security:firefox": "playwright test tests/security --project=firefox",
+    "test:security:webkit": "playwright test tests/security --project=webkit"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

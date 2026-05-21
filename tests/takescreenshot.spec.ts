@@ -1,24 +1,18 @@
 import { test, expect } from '@playwright/test';
 
 test('should take a Full Page screenshot', async ({ page }) => {
-    await page.setViewportSize({ width: 1920, height: 1080 });
-    await page.goto('https://mitesh411.github.io/MyResume/');
+    await page.setViewportSize({ width: 1280, height: 720 });
+    await page.goto('https://mitesh411.github.io/MyResume/', { timeout: 30000 });
     await page.screenshot({ path: 'screenshot/fullpage.png', fullPage: true });
-    await page.close();
-
-
-})
+});
 
 test('Capture Screenshot of an Element', async ({ page }) => {
-    await page.setViewportSize({ width: 1920, height: 1080 });
-    await page.goto('https://the-internet.herokuapp.com/dropdown');
+    await page.setViewportSize({ width: 1280, height: 720 });
+    await page.goto('https://the-internet.herokuapp.com/dropdown', { timeout: 30000 });
     await page
         .locator('#dropdown')
         .screenshot({ path: 'screenshot/element.png' });
-    await page.close();
-
-})
-
+});
 
 //Automatic Screen Capture on Test Failure
 
@@ -31,12 +25,8 @@ test('Capture Screenshot of an Element', async ({ page }) => {
 //     await expect(page.locator('div#flash')).toContainText('You logged into a secure area!');
 // })
 
-
 test('Verify the Title of My Resume Website', async({page}) =>{
-    await page.goto('https://mitesh411.github.io/MyResume/');
+    await page.goto('https://mitesh411.github.io/MyResume/', { timeout: 30000 });
     const title = await page.title();
     expect(title).toBe('Mitesh Dandade - MyResume');
-    await page.close();
-
-})
-
+});

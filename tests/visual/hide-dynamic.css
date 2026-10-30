@@ -1,0 +1,24 @@
+/* Applied only while screenshots are captured. */
+
+/* The typing effect cycles through Latin, Devanagari and Gujarati names; the latter
+   use fallback fonts with taller line boxes, so the span is removed from layout entirely. */
+#hero .typed {
+  display: none !important;
+}
+
+/* Content that changes on every run: typing cursor, live IST clock, current year. */
+#hero .typed-cursor,
+[data-clock],
+[data-year] {
+  visibility: hidden !important;
+}
+
+/* Viewport-fixed decorative layers render at a different offset for each
+   scroll position during tall captures; pin the background and drop the grain. */
+.page-bg {
+  position: absolute !important;
+}
+
+body::before {
+  display: none !important;
+}

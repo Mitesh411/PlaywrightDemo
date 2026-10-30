@@ -23,6 +23,15 @@ export default defineConfig({
   reporter: process.env.CI 
     ? [['html'], ['allure-playwright']]
     : [['html'], ['line']],
+  /* Visual comparison defaults: tolerate minor anti-aliasing differences only.
+     An absolute pixel budget is used because a ratio scales with image size and would
+     let a recoloured paragraph slip through on a 20,000px full-page capture. */
+  expect: {
+    toHaveScreenshot: {
+      maxDiffPixels: 100,
+      threshold: 0.2,
+    },
+  },
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */

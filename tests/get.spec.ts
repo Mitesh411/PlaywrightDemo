@@ -1,13 +1,27 @@
 import { test, expect } from "@playwright/test";
 
 test("GET booking summary", async ({ request }) => {
+  const login = await request.post(
+    "https://automationintesting.online/api/auth/login",
+    {
+      data: { username: "admin", password: "password" },
+      timeout: 30000,
+    }
+  );
+  expect(login.status()).toBe(200);
+  const { token } = await login.json();
+
   const response = await request.get(
-    "https://automationintesting.online/booking/summary?roomid=1",
-    { timeout: 30000 }
+    "https://automationintesting.online/api/booking/summary?roomid=1",
+    {
+      headers: { Cookie: `token=${token}` },
+      timeout: 30000,
+    }
   );
 
   expect(response.status()).toBe(200);
   const body = await response.json();
+  expect(Array.isArray(body.bookings)).toBe(true);
 });
 
 test("API Post  Reponse", async ({ request }) => {

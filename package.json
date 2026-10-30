@@ -8,12 +8,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.55.0",
-    "@types/node": "^24.0.0",
-    "allure-commandline": "^2.34.1",
-    "allure-playwright": "^3.4.2"
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^24.19.2",
+    "allure-commandline": "^2.46.1",
+    "allure-playwright": "^3.14.0"
   },
   "dependencies": {
+    "lighthouse": "^13.6.0",
     "playwright-lighthouse": "^4.0.0"
   }
 }

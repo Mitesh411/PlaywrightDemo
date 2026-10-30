@@ -28,5 +28,5 @@ test('Capture Screenshot of an Element', async ({ page }) => {
 test('Verify the Title of My Resume Website', async({page}) =>{
     await page.goto('https://mitesh411.github.io/MyResume/', { timeout: 30000 });
     const title = await page.title();
-    expect(title).toBe('Mitesh Dandade - MyResume');
+    expect(title).toBe('Mitesh Dandade — QA Lead & Test Automation');
 });
